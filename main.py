@@ -1,6 +1,5 @@
 import discord
 import json
-import requests
 import youtube_dl
 import os
 import random
