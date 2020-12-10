@@ -2,4 +2,4 @@ discord.py
 aiohttp
 websockets
 chardet
-instagramm == https://github.com/OlegYurchik/pyInstagram/archive/master.zip
+https://github.com/OlegYurchik/pyInstagram/archive/master.zip
