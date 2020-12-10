@@ -1,6 +1,4 @@
 discord.py
-request
-youtube_dll
 aiohttp
 websockets
 chardet
