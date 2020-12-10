@@ -1,7 +1,6 @@
 import discord
 import json
 import requests
-import youtube_dl
 import os
 import random
 from discord.ext import commands
@@ -10,11 +9,9 @@ from discord import Game
 from ctypes.util import find_library
 from discord import opus
 import asyncio
-from discord.voice_client import VoiceClient
 from discord.ext.commands import Bot
 from discord import utils
 from discord.utils import get
-from discord import FFmpegPCMAudio
 from os import system
 Bot = commands.Bot(command_prefix='!')   # Провозглашаем переменную для бота с префиксом !
 
