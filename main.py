@@ -60,16 +60,19 @@ async def untest(ctx, member: discord.Member):
     role = discord.utils.get(member.guild.roles, name="test")
     await member.remove_roles(role)
 @Bot.event
-async def on_raw_reaction_add(payload):
-    if not payload.message_id == 784803672496406559:  # ID сообщения на которое нужно ставить реакции
-        return
-    if member := payload.member:
-     if payload.emoji.id == 746643268586176524:  # или payload.emoji.name == "✔" для unicode-эмодзей
-        await member.add_roles(member.guild.get_role(746643524212097134))
-        await member.remove_roles(member.guild.get_role(746634235061862531))
-     else:
-        await member.add_roles(member.guild.get_role(746634235061862531))
-        await member.remove_roles(member.guild.get_role(746643524212097134))
+async def on_ready():
+    Channel = Bot.get_channel('784803644516204554')
+    Text= "Тут"
+    Moji = await client.send_message(Channel, Text)
+    await client.add_reaction(Moji, emoji='red')
+@client.event
+async def on_reaction_add(reaction, user):
+    Channel = client.get_channel('784803644516204554')
+    if reaction.message.channel.id != Channel
+    return
+    if reaction.emoji == "red":
+      Role = discord.utils.get(user.server.roles, name="red")
+      await client.add_roles(user, Role)
 
 
 
