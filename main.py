@@ -8,11 +8,9 @@ from discord import Game
 from ctypes.util import find_library
 from discord import opus
 import asyncio
-from discord.voice_client import VoiceClient
 from discord.ext.commands import Bot
 from discord import utils
 from discord.utils import get
-from discord import FFmpegPCMAudio
 from os import system
 Bot = commands.Bot(command_prefix='!')   # Провозглашаем переменную для бота с префиксом !
 
@@ -76,22 +74,22 @@ async def on_raw_reaction_add(payload):
 
 
 
-@Bot.command()
-async def dsadas(ctx):
-    channel = ctx.message.author.voice.channel
-    if not channel:
-        await ctx.send("Тебя ни в одном голосовом канале")
-        return
-    voice = get(Bot.voice_clients, guild=ctx.guild)
-    if voice and voice.is_connected():
-        await voice.move_to(channel)
-    else:
-        voice = await channel.connect()
-        await ctx.send("Подключился к серверу")
-@Bot.command()
-async def leave(ctx):
-    await ctx.voice_client.disconnect()
-    await ctx.send("Отключился от сервера")
+#@Bot.command()
+#async def dsadas(ctx):
+    #channel = ctx.message.author.voice.channel
+    #if not channel:
+        #await ctx.send("Тебя ни в одном голосовом канале")
+#        return
+ #   voice = get(Bot.voice_clients, guild=ctx.guild)
+  #  if voice and voice.is_connected():
+   #     await voice.move_to(channel)
+    #else:
+     #   voice = await channel.connect()
+      #  await ctx.send("Подключился к серверу")
+#@Bot.command()
+#async def leave(ctx):
+ #   await ctx.voice_client.disconnect()
+  #  await ctx.send("Отключился от сервера")
 
 
 @Bot.command()
