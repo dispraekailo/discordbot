@@ -64,15 +64,15 @@ async def on_ready():
     Channel = Bot.get_channel('784803644516204554')
     Text= "Тут"
     Moji = await client.send_message(Channel, Text)
-    await client.add_reaction(Moji, emoji='red')
+    await Bot.add_reaction(Moji, emoji='red')
 @client.event
 async def on_reaction_add(reaction, user):
-    Channel = client.get_channel('784803644516204554')
+    Channel = Bot.get_channel('784803644516204554')
     if reaction.message.channel.id != Channel:
      return
     if reaction.emoji == "red":
       Role = discord.utils.get(user.server.roles, name="red")
-      await client.add_roles(user, Role)
+      await Bot.add_roles(user, Role)
 
 
 
