@@ -3,7 +3,6 @@ import json
 import os
 import random
 from discord.ext import commands
-from config import settings
 from discord import Game
 from ctypes.util import find_library
 from discord import opus
