@@ -63,7 +63,7 @@ async def untest(ctx, member: discord.Member):
 async def on_ready():
     Channel = Bot.get_channel('784803644516204554')
     Text= "Тут"
-    Moji = await client.send_message(Channel, Text)
+    Moji = await Bot.send_message(Channel, Text)
     await Bot.add_reaction(Moji, emoji='red')
 @client.event
 async def on_reaction_add(reaction, user):
