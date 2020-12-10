@@ -67,7 +67,7 @@ async def untest(ctx, member: discord.Member):
 async def on_raw_reaction_add(payload):
     if not payload.message_id == 784803672496406559:  # ID сообщения на которое нужно ставить реакции
         return
-    if member := payload.member:
+    if member == payload.member:
      if payload.emoji.id == 746643268586176524:  # или payload.emoji.name == "✔" для unicode-эмодзей
         await member.add_roles(member.guild.get_role(746643524212097134))
         await member.remove_roles(member.guild.get_role(746634235061862531))
