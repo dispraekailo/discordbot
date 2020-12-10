@@ -1,6 +1,6 @@
 import discord
 import json
-import requests
+from urllib import request
 import os
 import random
 from discord.ext import commands
