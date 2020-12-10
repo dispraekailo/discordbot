@@ -2,6 +2,7 @@ import discord
 import json
 import os
 import random
+import requests
 from discord.ext import commands
 from discord import Game
 from ctypes.util import find_library
