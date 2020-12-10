@@ -184,4 +184,4 @@ async def play(ctx, url: str):
     print("playing\n")
 token = os.environ.get('BOT_TOKEN')
 
-
+bot.run(str(token))
