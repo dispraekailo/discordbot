@@ -91,7 +91,7 @@ async def on_reaction_add(reaction, user):
       #  await ctx.send("Подключился к серверу")
 #@Bot.command()
 #async def leave(ctx):
- #   await ctx.voice_client.disconnect()
+ #  await ctx.voice_client.disconnect()
   #  await ctx.send("Отключился от сервера")
 
 
